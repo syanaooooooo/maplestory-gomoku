@@ -104,11 +104,8 @@ h1{font-family:'Noto Sans SC',sans-serif;font-weight:900;font-size:clamp(28px,5.
 .p .nm{font-size:13.5px;font-weight:700;line-height:1.25;flex:1;word-break:break-word}
 .p .score{width:26px;height:26px;flex:none;border:1.5px solid var(--line);
   display:grid;place-items:center;font-size:12px;color:var(--ink-2);font-weight:700;font-variant-numeric:tabular-nums}
-.p .dot{width:11px;height:11px;border-radius:50%;flex:none;border:1.5px solid var(--line-strong)}
-.p:first-of-type .dot{background:var(--stone-b);border-color:var(--stone-b)}
-.p:last-of-type .dot{background:var(--stone-w)}
+.p .mark{width:14px;flex:none;text-align:center;font-size:14px;font-weight:800;color:var(--green);line-height:1}
 .p.win .nm{color:var(--green)}
-.p.win .dot{background:var(--green);border-color:var(--green)}
 .p.win .score{background:var(--green);border-color:var(--green);color:var(--on-green)}
 .p.lose{opacity:.5}
 .p.lose .nm{font-weight:600}

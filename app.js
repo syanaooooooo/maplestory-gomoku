@@ -93,7 +93,7 @@ function matchCard(m){
     btn.disabled = !(a.known && b.known);
     btn.title = won ? '再点一次取消' : (btn.disabled ? '等上一轮打完' : '点一下 = 这个人赢');
     const score = r ? (won ? '2' : String(r.ls)) : '—';
-    btn.innerHTML = `<span class="dot"></span><span class="nm">${who.name}</span>` +
+    btn.innerHTML = `<span class="mark">${won ? '✓' : ''}</span><span class="nm">${who.name}</span>` +
                     `<span class="score" title="${lost ? '点比分切换 0 / 1' : ''}">${score}</span>`;
     btn.addEventListener('click', ev => {
       if (lost && ev.target.closest('.score')) bumpLoserScore(m.id);
