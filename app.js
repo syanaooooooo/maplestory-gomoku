@@ -10,7 +10,7 @@ const MATCHES = [
   { id:'m2', slot:'qf2', round:'八强赛', no:'第 2 场', when:'9/16 — 9/18',
     a:{p:'Tora丶'}, b:{p:'2005的晚风'} },
   { id:'m3', slot:'qf3', round:'八强赛', no:'第 3 场', when:'9/16 — 9/18',
-    a:{p:'冷苏打灬'}, b:{p:'摘旧枳'} },
+    a:{p:'牛包'}, b:{p:'摘旧枳'} },
   { id:'m4', slot:'qf4', round:'八强赛', no:'第 4 场', when:'9/16 — 9/18',
     a:{p:'欧欧'}, b:{p:'山猫'} },
   { id:'m5', slot:'sf1', round:'半决赛', no:'第 5 场', when:'9/19 周六', stub:true,
