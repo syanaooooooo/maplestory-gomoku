@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>朝暮朝夕五子棋大赛</title>
+<meta name="description" content="家族五子棋淘汰赛赛程表：8人随机抽签、对阵时间、三局两胜规则和奖池统计。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='11' cy='16' r='8' fill='%23171A13'/><circle cx='22' cy='16' r='7' fill='%23FDFDF8' stroke='%23171A13' stroke-width='1.5'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">家族活动</p>
+    <h1>朝暮朝夕五子棋大赛</h1>
+    <div class="stones"><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i></div>
+    <dl class="meta">
+      <div><dt>赛期</dt><dd>9月16日 — 9月20日</dd></div>
+      <div><dt>参赛</dt><dd>8 人</dd></div>
+      <div><dt>赛制</dt><dd>单败淘汰 · 三局两胜</dd></div>
+      <div><dt>分组</dt><dd>随机抽签</dd></div>
+      <div><dt>奖池</dt><dd>27 件 · 归前三名</dd></div>
+    </dl>
+  </header>
+
+  <section class="sec">
+    <div class="sec-h">
+      <h2>赛程表</h2>
+      <p>点名字就是选他赢，胜者自动进下一轮</p>
+    </div>
+
+    <div class="tools">
+      <button class="btn primary" id="copy-report">复制战报</button>
+      <button class="btn" id="export-txt">导出战报 .txt</button>
+      <button class="btn" id="export-json">导出数据 .json</button>
+      <button class="btn ghost" id="reset">重置</button>
+      <span class="hint" id="progress">已打 0 / 8 场</span>
+    </div>
+
+    <div class="rounds">
+      <div class="rh now"><b>八强赛</b><span>9月16日（周三）— 9月18日（周五）24:00 前</span></div>
+      <div class="rh"><b>半决赛</b><span>9月19日（周六）20:00</span></div>
+      <div class="rh"><b>决赛 · 季军赛</b><span>9月20日（周日）20:00 起</span></div>
+    </div>
+
+    <div class="bracket" id="bracket"></div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h"><h2>最终名次</h2><p>打完自动出结果</p></div>
+    <div class="podium" id="podium"></div>
+  </section>
+
+  <section class="sec cols">
+    <div class="panel">
+      <h3>规则</h3>
+      <ol class="rules">
+        <li><b>三局两胜</b>，先赢两局的人晋级，输的人本届结束（季军赛除外）。</li>
+        <li>第一局<b>猜先</b>决定谁执黑，之后每局轮流执黑。黑棋先手。</li>
+        <li><b>不设禁手</b>，先连成五子的人赢，长连（六子以上）也算赢。</li>
+        <li>每局下完<b>截图发到群里</b>，作为战绩记录，没截图不算。</li>
+        <li>八强赛双方自己约时间，<b>9月18日 24:00 前</b>打完并报成绩。</li>
+        <li>约不上时间或者到点没打完，在群里说一声，我来协调改期。</li>
+      </ol>
+    </div>
+
+    <div class="panel">
+      <h3>奖池</h3>
+      <div class="tally">
+        <div><b>8</b><span>位捐赠人</span></div>
+        <div><b>27</b><span>件物品</span></div>
+        <div><b>6</b><span>种物品</span></div>
+      </div>
+      <table>
+        <tr><th>物品</th><th style="text-align:center">数量</th><th style="text-align:right">来自</th></tr>
+        <tr><td class="who">皇家理发</td><td class="qty">3 张</td><td class="what">冷苏打灬 · 欧欧 · Tora丶牧师</td></tr>
+        <tr><td class="who">猪头</td><td class="qty">20 个</td><td class="what">2005的晚风</td></tr>
+        <tr><td class="who">向日葵武器</td><td class="qty">1 个</td><td class="what">淬雪-刀飞</td></tr>
+        <tr><td class="who">粑粑棍子</td><td class="qty">1 个</td><td class="what">伽椰菜菜子</td></tr>
+        <tr><td class="who">八戒帽</td><td class="qty">1 个</td><td class="what">窃月（溪溪）· 只捐不参赛</td></tr>
+        <tr><td class="who">盲盒礼物 <span class="tag">待揭晓</span></td><td class="qty">1 份</td><td class="what">摘旧枳-牧师</td></tr>
+      </table>
+      <p class="note">奖池发给冠军、亚军、季军，分配比例开赛前在群里定。盲盒礼物由摘旧枳提供，内容等开奖。还想加东西的随时找我。</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>分组由电脑随机抽签生成 · 2026年9月15日</span>
+    <span>共 8 场比赛 · 8 人参赛 · 1 人只捐赠</span>
+  </footer>
+
+</div>
+<div class="toast" id="toast"></div>
+<script src="app.js?v=1"></script>
+</body>
+</html>
