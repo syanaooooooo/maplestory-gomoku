@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="wrap">
@@ -30,7 +30,7 @@
   <section class="sec">
     <div class="sec-h">
       <h2>赛程表</h2>
-      <p>点名字就是选他赢，胜者自动进下一轮</p>
+      <p>点名字就是选 ta 赢，胜者自动进下一轮</p>
     </div>
 
     <div class="tools">
@@ -42,9 +42,9 @@
     </div>
 
     <div class="rounds">
-      <div class="rh now"><b>八强赛</b><span>9月16日（周三）— 9月18日（周五）24:00 前</span></div>
-      <div class="rh"><b>半决赛</b><span>9月19日（周六）20:00</span></div>
-      <div class="rh"><b>决赛 · 季军赛</b><span>9月20日（周日）20:00 起</span></div>
+      <div class="rh now"><b>八强赛</b><span>9月16日（周三）— 9月18日（周五）前打完</span></div>
+      <div class="rh"><b>半决赛</b><span>9月19日（周六）当天打完</span></div>
+      <div class="rh"><b>决赛 · 季军赛</b><span>9月20日（周日）当天打完</span></div>
     </div>
 
     <div class="bracket" id="bracket"></div>
@@ -59,10 +59,9 @@
     <div class="panel">
       <h3>规则</h3>
       <ol class="rules">
-        <li><b>三局两胜</b>，先赢两局的人晋级，输的人本届结束（季军赛除外）。</li>
-        <li>横、竖、斜任意方向，<b>先把自己的五颗棋连成一条线</b>就赢。</li>
-        <li>第一局<b>猜先</b>决定谁执黑，之后每局轮流执黑。黑棋先手。</li>
-        <li>本次<b>不设禁手</b>：正规赛黑棋有三三、四四、长连禁手，我们不用，长连（六子以上）也算赢。</li>
+        <li><b>三局两胜</b>，胜者晋级。</li>
+        <li>第一局<b>开局的人执黑</b>（黑棋先手），之后每局都由<b>上一局的败方执黑</b>。</li>
+        <li>棋盘棋子自备，<b>一场比赛有一个人提供棋盘就行</b>，下几局都一样。可以去拍卖场买，不懂的在群里问。</li>
         <li>每局下完<b>截图发到群里</b>，作为战绩记录，没截图不算。</li>
         <li>八强赛双方自己约时间，<b>9月18日 24:00 前</b>打完并报成绩。</li>
       </ol>
@@ -77,12 +76,12 @@
       </div>
       <table>
         <tr><th>物品</th><th style="text-align:center">数量</th><th style="text-align:right">来自</th></tr>
-        <tr><td class="who">皇家理发</td><td class="qty">3 张</td><td class="what">冷苏打灬 · 欧欧 · Tora丶牧师</td></tr>
+        <tr><td class="who">皇家理发</td><td class="qty">3 张</td><td class="what">冷苏打灬 · 欧欧 · Tora丶</td></tr>
         <tr><td class="who">猪头</td><td class="qty">20 个</td><td class="what">2005的晚风</td></tr>
-        <tr><td class="who">向日葵武器</td><td class="qty">1 个</td><td class="what">淬雪-刀飞</td></tr>
+        <tr><td class="who">向日葵武器</td><td class="qty">1 个</td><td class="what">淬雪</td></tr>
         <tr><td class="who">粑粑棍子</td><td class="qty">1 个</td><td class="what">伽椰菜菜子</td></tr>
-        <tr><td class="who">八戒帽</td><td class="qty">1 个</td><td class="what">窃月（溪溪）· 只捐不参赛</td></tr>
-        <tr><td class="who">盲盒礼物 <span class="tag">待揭晓</span></td><td class="qty">1 份</td><td class="what">摘旧枳-牧师</td></tr>
+        <tr><td class="who">八戒帽</td><td class="qty">1 个</td><td class="what">窃月 · 只捐不参赛</td></tr>
+        <tr><td class="who">盲盒礼物 <span class="tag">待揭晓</span></td><td class="qty">1 份</td><td class="what">摘旧枳</td></tr>
       </table>
       <h3 style="margin:20px 0 10px">奖品分配</h3>
       <ul class="alloc">
@@ -90,7 +89,6 @@
         <li><span class="rk">亚军</span><span>1 张皇家理发 · 1 个粑粑棍子</span></li>
         <li><span class="rk">季军</span><span>1 个八戒帽 · 1 份盲盒礼物</span></li>
       </ul>
-      <p class="note">27 件奖品全部分完。盲盒礼物由摘旧枳提供，内容等季军产生后揭晓。还想往奖池里加东西的随时找我。</p>
     </div>
   </section>
 
@@ -101,6 +99,6 @@
 
 </div>
 <div class="toast" id="toast"></div>
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

@@ -6,20 +6,20 @@ const EVENT = '朝暮朝夕五子棋大赛';
 
 const MATCHES = [
   { id:'m1', slot:'qf1', round:'八强赛', no:'第 1 场', when:'9/16 — 9/18',
-    a:{p:'伽椰菜菜子—牧师&冰雷'}, b:{p:'淬雪-刀飞'} },
+    a:{p:'伽椰菜菜子'}, b:{p:'淬雪'} },
   { id:'m2', slot:'qf2', round:'八强赛', no:'第 2 场', when:'9/16 — 9/18',
-    a:{p:'Tora丶牧师'}, b:{p:'2005的晚风（猎人）'} },
+    a:{p:'Tora丶'}, b:{p:'2005的晚风'} },
   { id:'m3', slot:'qf3', round:'八强赛', no:'第 3 场', when:'9/16 — 9/18',
-    a:{p:'冷苏打灬'}, b:{p:'摘旧枳-牧师'} },
+    a:{p:'冷苏打灬'}, b:{p:'摘旧枳'} },
   { id:'m4', slot:'qf4', round:'八强赛', no:'第 4 场', when:'9/16 — 9/18',
-    a:{p:'欧欧'}, b:{p:'风携箭羽（山猫）-猎人糕糕手'} },
-  { id:'m5', slot:'sf1', round:'半决赛', no:'第 5 场', when:'9/19 周六 20:00', stub:true,
+    a:{p:'欧欧'}, b:{p:'山猫'} },
+  { id:'m5', slot:'sf1', round:'半决赛', no:'第 5 场', when:'9/19 周六', stub:true,
     a:{w:'m1'}, b:{w:'m2'} },
-  { id:'m6', slot:'sf2', round:'半决赛', no:'第 6 场', when:'9/19 周六 20:00', stub:true,
+  { id:'m6', slot:'sf2', round:'半决赛', no:'第 6 场', when:'9/19 周六', stub:true,
     a:{w:'m3'}, b:{w:'m4'} },
-  { id:'m7', slot:'fin', round:'决赛', no:'决赛 · 争冠军', when:'9/20 周日 21:00', cls:'final', stub:true,
+  { id:'m7', slot:'fin', round:'决赛', no:'决赛 · 争冠军', when:'9/20 周日', cls:'final', stub:true,
     a:{w:'m5'}, b:{w:'m6'} },
-  { id:'m8', slot:'thd', round:'季军赛', no:'季军赛 · 争第三', when:'9/20 周日 20:00', cls:'third',
+  { id:'m8', slot:'thd', round:'季军赛', no:'季军赛 · 争第三', when:'9/20 周日', cls:'third',
     a:{l:'m5'}, b:{l:'m6'} },
 ];
 
@@ -131,14 +131,14 @@ function podium(){
 function render(){
   const wrap = document.getElementById('bracket');
   wrap.textContent = '';
-  wrap.appendChild(roundTag('八强赛', '9/16 周三 — 9/18 周五 24:00 前'));
+  wrap.appendChild(roundTag('八强赛', '9/16 周三 — 9/18 周五 前打完'));
   ['m1','m2','m3','m4'].forEach(id => wrap.appendChild(matchCard(M[id])));
   wrap.appendChild(conn('c1'));
   wrap.appendChild(conn('c2'));
-  wrap.appendChild(roundTag('半决赛', '9/19 周六 20:00'));
+  wrap.appendChild(roundTag('半决赛', '9/19 周六 当天打完'));
   ['m5','m6'].forEach(id => wrap.appendChild(matchCard(M[id])));
   wrap.appendChild(conn('c3'));
-  wrap.appendChild(roundTag('决赛 · 季军赛', '9/20 周日'));
+  wrap.appendChild(roundTag('决赛 · 季军赛', '9/20 周日 当天打完'));
   ['m7','m8'].forEach(id => wrap.appendChild(matchCard(M[id])));
 
   const pod = document.getElementById('podium');
