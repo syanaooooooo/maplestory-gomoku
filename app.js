@@ -122,9 +122,9 @@ function podium(){
   const second = f ? resolve(M.m7[f.w === 'a' ? 'b' : 'a']).name : null;
   const third = t ? resolve(M.m8[t.w]).name : null;
   return [
-    { rank:'冠军', name:champ, gold:true },
-    { rank:'亚军', name:second },
-    { rank:'季军', name:third },
+    { rank:'冠军', name:champ, gold:true, prize:'2 张皇家理发 · 1 个向日葵武器 · 20 个猪头' },
+    { rank:'亚军', name:second, prize:'1 张皇家理发 · 1 个粑粑棍子' },
+    { rank:'季军', name:third, prize:'1 个八戒帽 · 1 份盲盒礼物' },
   ];
 }
 
@@ -147,7 +147,8 @@ function render(){
     const d = document.createElement('div');
     if (p.gold && p.name) d.className = 'gold';
     d.innerHTML = `<div class="rank">${p.rank}</div>` +
-                  `<div class="name${p.name ? '' : ' pending'}">${p.name || '待定'}</div>`;
+                  `<div class="name${p.name ? '' : ' pending'}">${p.name || '待定'}</div>` +
+                  `<div class="prize">${p.prize}</div>`;
     pod.appendChild(d);
   }
 
@@ -171,8 +172,8 @@ function reportText(){
     }
   }
   const p = podium();
-  lines.push('', '【最终名次】');
-  p.forEach(x => lines.push(`${x.rank}：${x.name || '待定'}`));
+  lines.push('', '【最终名次 · 奖品】');
+  p.forEach(x => lines.push(`${x.rank}：${x.name || '待定'}   —— ${x.prize}`));
   return lines.join('\n');
 }
 
@@ -189,7 +190,7 @@ function reportJSON(){
         winner: r ? (r.w === 'a' ? a.name : b.name) : null,
       };
     }),
-    podium: Object.fromEntries(podium().map(x => [x.rank, x.name])),
+    podium: Object.fromEntries(podium().map(x => [x.rank, { name: x.name, prize: x.prize }])),
   }, null, 2);
 }
 

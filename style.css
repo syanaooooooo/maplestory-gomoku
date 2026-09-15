@@ -184,6 +184,13 @@ td.who{font-weight:700;padding-right:12px}
 td.qty{text-align:center;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;padding:7px 8px}
 td.what{color:var(--ink-2);text-align:right;font-size:12.5px;line-height:1.35}
 tr:last-child td{border-bottom:0}
+.alloc{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.alloc li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45}
+.rk{flex:none;width:44px;text-align:center;font-size:11.5px;font-weight:800;padding:3px 0;
+  background:var(--green-soft);color:var(--green)}
+.rk.gold{background:var(--amber-soft);color:var(--amber)}
+.podium .prize{margin-top:7px;padding-top:7px;border-top:1px solid var(--line);
+  font-size:12px;color:var(--ink-2);line-height:1.45}
 .note{margin-top:14px;padding:10px 12px;background:var(--amber-soft);font-size:13px;color:var(--ink);border-left:3px solid var(--amber)}
 footer{margin-top:28px;padding-top:14px;border-top:1.5px solid var(--line);
   display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--ink-2)}
